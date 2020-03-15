@@ -1,0 +1,38 @@
+#Container{
+    background: black;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#Title_Container{
+    padding-top: 1.8rem;
+    padding-left: 1rem;
+    display: inline-block;
+}
+
+#Title{
+    color:white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+#Menu{
+    padding-top: 2.5rem;
+    max-width: 50%;
+    margin-right: 25px;
+    float: right;
+}
+
+.Menu_Option{
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    
+}
+
+.Menu_Option_Title{
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+}
