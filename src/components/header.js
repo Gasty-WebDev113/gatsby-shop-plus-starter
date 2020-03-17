@@ -22,16 +22,19 @@ const Header = ({ siteTitle }) => (
     </div>
     <nav id="Menu">
        <ol className="Menu_Option">
-        <Link className="Menu_Option_Title" to="/" id="Men"> Shirts </Link>
+        <Link className="Menu_Option_Title" to="/"> Shirts </Link>
        </ol>
        <ol className="Menu_Option">
-        <Link className="Menu_Option_Title" to="/" id="Men"> Pants </Link>
+        <Link className="Menu_Option_Title" to="/"> Pants </Link>
        </ol>
        <ol className="Menu_Option">
-        <Link className="Menu_Option_Title" to="/" id="Men"> Shoes </Link>
+        <Link className="Menu_Option_Title" to="/" > Shoes </Link>
        </ol>
        <ol className="Menu_Option">
-        <Link className="Menu_Option_Title" to="/" id="Men"> Watchs </Link>
+        <Link className="Menu_Option_Title" to="/" > Watchs </Link>
+       </ol>
+       <ol className="Menu_Option">
+        <Link className="Menu_Option_Title" to="/" > Contact </Link>
        </ol>
      </nav>
   </header>

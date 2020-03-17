@@ -1,11 +1,11 @@
 #Container{
-    background: black;
+    background: #05001E;
     width: 100%;
-    margin-bottom: 25px;
+    height: 80px;
 }
 
 #Title_Container{
-    padding-top: 1.8rem;
+    padding-top: 0.5rem;
     padding-left: 1rem;
     display: inline-block;
 }
@@ -17,7 +17,7 @@
 }
 
 #Menu{
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
     max-width: 50%;
     margin-right: 25px;
     float: right;
