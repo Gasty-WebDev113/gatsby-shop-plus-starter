@@ -1,13 +1,5 @@
 #Container{
-    background: #05001E;
-    width: 100%;
-    height: 80px;
-}
-
-#Title_Container{
-    padding-top: 0.5rem;
-    padding-left: 1rem;
-    display: inline-block;
+    background: #05001E !important;
 }
 
 #Title{
@@ -16,23 +8,47 @@
     text-decoration: none;
 }
 
-#Menu{
-    padding-top: 1.5rem;
-    max-width: 50%;
-    margin-right: 25px;
-    float: right;
-}
-
-.Menu_Option{
-    display: inline-block;
-    font-size: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
-    
+#Menu_Items{
+    width: 100%;
+    text-align: end;
 }
 
 .Menu_Option_Title{
     text-decoration: none;
     color: white;
     font-weight: normal;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.Menu_Option_Title:hover{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.Menu_Option_Icon{
+    margin-right: 20px;
+    display: none;
+}
+
+.navbar-light .navbar-toggler{
+    background: white !important;
+}
+
+@media only screen and (max-width: 990px){
+    .Menu_Option_Icon{
+        display: inherit;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #Title{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    #Title{
+        font-size: 15px;
+    }
 }

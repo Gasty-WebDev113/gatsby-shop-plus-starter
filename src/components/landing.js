@@ -18,7 +18,9 @@ const Landing = () => (
                     <Button variant="success" href="/">Go to Shop</Button>
                 </div>
             <Carousel.Caption>
-                <p>Add Footer</p>
+                <div id="Landing_Footer">
+                    <p>Add Footer</p>
+                </div>
             </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -31,7 +33,9 @@ const Landing = () => (
                     <Button variant="success" href="/">Go to Shop</Button>
                 </div>
             <Carousel.Caption>
-                <p>Add Footer</p>
+                <div id="Landing_Footer">
+                    <p>Add Footer</p>
+                </div>
             </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -44,7 +48,9 @@ const Landing = () => (
                     <Button variant="success" href="/">Go to Shop</Button>
                 </div>
             <Carousel.Caption>
-                <p>Add Footer</p>
+                <div id="Landing_Footer">
+                    <p>Add Footer</p>
+                </div>
             </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
