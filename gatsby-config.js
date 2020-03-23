@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Shop Plus Starter`,
@@ -25,6 +27,22 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-zopfli',
+      options:{
+        extensions: ['css', 'html', 'js', 'svg']
+      },
+    },
+    'gatsby-plugin-robots-txt',
+    {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        // Domain name of Shopify shop.
+        shopName: process.env.SHOP_NAME,
+        // Sstorefront access token
+        accessToken: process.env.SHOP_TOKEN,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

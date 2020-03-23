@@ -1,0 +1,51 @@
+#Product_Card{
+  width: 20rem;
+  overflow: hidden;
+}
+
+.ProductCard_Link{
+    color: black;
+}
+.ProductCard_Link:hover{
+    text-decoration: none;
+    color: black;
+}
+
+#ProductCard_Image:not(:hover){
+    transition: all 0.2s ease-in-out;
+    transform: scale(1);
+    z-index: 1;
+    opacity: 0.75;
+}
+
+#ProductCard_Image:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.25);
+    opacity: 1;
+}
+
+.ProductCard_Badge{
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+#ProductCard_Description{
+    font-size: 12px;
+}
+
+#ProductCard_Price{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#ProductCard_Price span{
+    margin-left: 10px;
+    font-weight: lighter;
+    text-decoration: line-through;
+    color: gray;
+}
+
+#ProductCard_CartIcon{
+    margin-left: 15px;
+}
+
