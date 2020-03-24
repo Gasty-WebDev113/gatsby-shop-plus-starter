@@ -8,32 +8,46 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import image from '../images/Image.jpg'
 import './card.css'
 
-const ProductCard = ({price}) => (
+const ProductCard = ({
+    title,
+    description,
+    images,
+    priceRange,
+    variants,
+    tags,
+}) => {
+    console.log(tags)
+    return(
     <Card id="Product_Card">
         <Link className="ProductCard_Link" to="/Product">
-            <Card.Img variant="top" src={image} id="ProductCard_Image" />
+            <Card.Img variant="top" src={images[0].originalSrc} id="ProductCard_Image" />
         </Link>
         <Card.Body>
             <Card.Title>
                 <Link className="ProductCard_Link" to="/Product">
-                Card Title
+                {title}
                 </Link>
             </Card.Title>
-                <Badge variant="success">New</Badge>
-                <Badge className="ProductCard_Badge" variant="dark">Deluxe</Badge>
-                <Badge className="ProductCard_Badge" variant="primary">Featured</Badge>
+                {
+                    tags ? tags.map(tag => 
+                    <Badge className="ProductCard_Badge" variant="primary">{tag}</Badge>
+                    ) : null
+                } 
             <Card.Text id="ProductCard_Description">
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                {description}
             </Card.Text>
             <span id="ProductCard_Price">
                 <Link className="ProductCard_Link" to="/Product">
-                    {price}<span>$550</span><FontAwesomeIcon id="ProductCard_CartIcon" icon={faShoppingCart} color="black" size="1x"/>
+                    {priceRange.minVariantPrice.amount}
+                    {
+                        variants[0].compareAtPrice ? <span>$550</span> : null
+                    }
+                    <FontAwesomeIcon id="ProductCard_CartIcon" icon={faShoppingCart} color="black" size="1x"/>
                 </Link>
             </span>
         </Card.Body>
-    </Card>
-)
+    </Card>)
+}
 
 export default ProductCard
 

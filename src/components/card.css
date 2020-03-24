@@ -1,6 +1,7 @@
 #Product_Card{
   width: 20rem;
   overflow: hidden;
+  margin: 20px;
 }
 
 .ProductCard_Link{
@@ -13,14 +14,14 @@
 
 #ProductCard_Image:not(:hover){
     transition: all 0.2s ease-in-out;
-    transform: scale(1);
+    transform: scale(0.75);
     z-index: 1;
     opacity: 0.75;
 }
 
 #ProductCard_Image:hover{
     transition: all 0.2s ease-in-out;
-    transform: scale(1.25);
+    transform: scale(1);
     opacity: 1;
 }
 
@@ -49,3 +50,14 @@
     margin-left: 15px;
 }
 
+@media only screen and (max-width: 600px){
+    #Product_Card{
+        width: 80%;
+      }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px){
+    #Product_Card{
+        width: 60%;
+      }
+}
