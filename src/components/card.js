@@ -24,23 +24,23 @@ const ProductCard = ({
         </Link>
         <Card.Body>
             <Card.Title>
-                <Link className="ProductCard_Link" to="/Product">
+                <Link className="ProductCard_Link" id="Product_Card_Title" to="/Product">
                 {title}
                 </Link>
             </Card.Title>
                 {
                     tags ? tags.map(tag => 
-                    <Badge className="ProductCard_Badge" variant="primary">{tag}</Badge>
+                    <Badge className="Card_Responsive ProductCard_Badge" variant="primary">{tag}</Badge>
                     ) : null
                 } 
-            <Card.Text id="ProductCard_Description">
+            <Card.Text id="ProductCard_Description" className="Card_Responsive">
                 {description}
             </Card.Text>
             <span id="ProductCard_Price">
                 <Link className="ProductCard_Link" to="/Product">
                     {priceRange.minVariantPrice.amount}
                     {
-                        variants[0].compareAtPrice ? <span>$550</span> : null
+                        variants[0].compareAtPrice ? <span className="Card_Responsive">{variants[0].compareAtPrice}</span> : null
                     }
                     <FontAwesomeIcon id="ProductCard_CartIcon" icon={faShoppingCart} color="black" size="1x"/>
                 </Link>

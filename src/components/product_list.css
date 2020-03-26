@@ -1,9 +1,12 @@
-#Product_List{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    display: inline-flex;
+#Product_List_Container{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+}
+
+#Product_List_Container>Button{
+    width: 25%;
+    margin-top: 20px;
 }
 
 #Product_List_Title{
@@ -14,12 +17,20 @@
     flex-direction: column;
     align-items: center;
 }
-#Product_List_Title:after{
+#Product_List_Title:before{
     content: '';
-    height: 6px;
-    width: 15%;
-    background: red;
-    margin-top: 5px;
+    height: 5px;
+    width: 75%;
+    background: black;
+    margin-top: 6px;
+}
+
+#Product_List{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: inline-flex;
+    justify-content: center;
 }
 
 .Product_List_Item{
@@ -36,4 +47,7 @@
         display: flex !important;
         flex-wrap: wrap;
     }    
+    #Product_List_Container>Button{
+        width: 50% !important;
+    }
 }

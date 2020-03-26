@@ -1,0 +1,50 @@
+.Blog_Card_Link{
+    text-decoration: none;
+    color: black;
+}
+.Blog_Card_Link:hover{
+    color: black;
+    text-decoration: none;  
+}
+
+#Blog_Card_Container{
+    width: 35%;
+    height: 12rem;
+    display: flex;
+    height: 10rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: row !important;
+    border: 0px !important;
+}
+
+.Blog_Card_Image{
+    height: 100%;
+    width: 50% !important;
+    background: transparent;
+}
+
+#Blog_Card_Body{
+    width: 50%;
+    padding-top: 10px !important;
+    padding-right: 5px !important;
+}
+
+.Blog_Card_Text{
+    font-size: 12px;
+}
+
+#Blog_Card_Tag{
+    margin-bottom: 10px;
+}
+
+.Blog_Card_Title{
+    margin-bottom: 20px !important;
+}
+
+@media only screen and (max-width: 600px){
+    #Blog_Card_Container{
+        width: 95%;
+        height: 10rem;
+    }
+}

@@ -1,13 +1,14 @@
 #Landing_Container{
     width: 100%;
     overflow: hidden;
+    margin-top: 80px;
 }
 
 #Landing_Title{
-    position: absolute;
+    position: relative;
+    width: 100%;
     z-index: 1;
     text-align: center;
-    width: 50%;
     color: white;
     top: 10%;
     left: 50%;

@@ -54,10 +54,22 @@
     #Product_Card{
         width: 80%;
       }
+    .Card_Responsive{
+        display: none !important;
+    }
+    #Product_Card{
+        width: 45%;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    .ProductCard_Link{
+        font-size: 18px;
+        font-weight: bolder;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 800px){
     #Product_Card{
-        width: 60%;
-      }
+        width: 40%;
+    }
 }

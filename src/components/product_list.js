@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import ProductCard from './card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import './product_list.css'
+import { Button } from "react-bootstrap"
 
 const ProductList = () => {
     const data = useStaticQuery(
@@ -39,7 +40,7 @@ const ProductList = () => {
             `)
 
     return(
-        <div >
+        <div id="Product_List_Container" >
             <h1 id="Product_List_Title">Featured</h1>
             <div id="Product_List">
                 {
@@ -48,6 +49,7 @@ const ProductList = () => {
                     )
                 }
             </div>
+            <Button variant="outline-dark">View Featured</Button>
         </div>
     )
 }
