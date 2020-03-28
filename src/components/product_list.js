@@ -45,7 +45,7 @@ const ProductList = () => {
             <div id="Product_List">
                 {
                     data.allShopifyProduct.edges.map(({node}) =>
-                            <ProductCard {...node} />
+                        <ProductCard {...node} />
                     )
                 }
             </div>

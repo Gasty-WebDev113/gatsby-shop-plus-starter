@@ -1,16 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import "./landing.css"
-import Image from "./image"
 import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
 
-const Landing = () => (
+const Landing = () => {
+    const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "Image.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  
+  return(
     <div>  
         <Carousel indicators={false}>
             <Carousel.Item>
                 <div id="Landing_Container" >
-                    <Image />
+                    <Img fluid={data.placeholderImage.childImageSharp.fluid}  />
                 </div>
             <Carousel.Caption>
                 <div id="Landing_Title">
@@ -25,7 +38,7 @@ const Landing = () => (
             </Carousel.Item>
             <Carousel.Item>
                 <div id="Landing_Container" >
-                    <Image />
+                    <Img fluid={data.placeholderImage.childImageSharp.fluid}  />
                 </div>
             <Carousel.Caption>
                 <div id="Landing_Title">
@@ -40,7 +53,7 @@ const Landing = () => (
             </Carousel.Item>
             <Carousel.Item>
                 <div id="Landing_Container" >
-                    <Image />
+                    <Img fluid={data.placeholderImage.childImageSharp.fluid}  />
                 </div>
             <Carousel.Caption>
                 <div id="Landing_Title">
@@ -55,6 +68,7 @@ const Landing = () => (
             </Carousel.Item>
         </Carousel>
     </div>
-)
+  )
+}
 
 export default Landing

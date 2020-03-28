@@ -1,0 +1,19 @@
+#First_Blog_Container{
+    height: 40rem;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    flex-direction: column !important;
+    border: 0px !important;
+}
+
+#First_Blog_Image{
+    height: 80% !important; 
+    width: 100%;
+}
+
+#First_Blog_Image>div{
+    height: 100%;
+}
+
+
