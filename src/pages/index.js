@@ -6,6 +6,9 @@ import Landing from "../components/landing"
 import SEO from "../components/seo"
 import ProductList from "../components/product_list"
 import BlogList from "../components/bloglist"
+import Footer from "../components/footer"
+
+import '../utils/globalstyles.css'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 const IndexPage = () => (
@@ -14,7 +17,7 @@ const IndexPage = () => (
     <Landing />
     <ProductList />
     <BlogList />
-    <Link to="/page-2/">Go to page 2</Link>
+    <Footer />
   </Layout>
 )
 

@@ -20,10 +20,10 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
+        <footer style={{textAlign: "center", background: "#000033", color:"white", paddingBottom: "10px"}}>
+          © {new Date().getFullYear()}, Built with ❤️ by
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://github.com/Gasty-WebDev113">Gasty-WebDev113</a>
         </footer>
       </div>
     </>

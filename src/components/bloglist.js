@@ -34,7 +34,7 @@ const BlogList = () => {
     return(
         <div id="Blog_List_Background">
             <div id="Blog_List_Container">
-                <h1 id="Blog_List_Title">New Blogs !!!</h1>
+                <h1 className="List_Title">New Blogs !!!</h1>
                 <div id="Blogs">
                     <div id="First_Blog">
                         <FirstBlog/>
@@ -42,12 +42,12 @@ const BlogList = () => {
                     <div id="Blogs_List">
                         {
                             blogdata.allShopifyArticle.edges.map(({node}) => 
-                                <BlogCard {...node} />
+                                <BlogCard {...node} key={node.id} />
                             )
                         }
                     </div>
                 </div>
-                <Button variant="outline-primary">View Featured</Button>
+                <Button variant="outline-dark" className="List_Button">View Featured</Button>
             </div>
         </div>
     )

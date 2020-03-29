@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart, faTshirt, faWalking, faShoePrints, faClock, faPaperPlane } from '@fortawesome/free-solid-svg-icons'  
+import { faShoppingCart, faTshirt, faBook, faUser, faPaperPlane } from '@fortawesome/free-solid-svg-icons'  
 // For more information of Icons go to FontAwsome React Documentation
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -22,23 +22,18 @@ const Header = ({ siteTitle }) => (
         <Nav inline className="d-flex justify-content-end" id="Menu_Items" >
           <Nav.Link>
             <Link className="Menu_Option_Title" to="/"> 
-              <FontAwesomeIcon className="Menu_Option_Icon" icon={faTshirt} color="white" size="1x"/>Shirts 
+              <FontAwesomeIcon className="Menu_Option_Icon" icon={faTshirt} color="white" size="1x"/>Products 
             </Link>
           </Nav.Link>
           <Nav.Link>
             <Link className="Menu_Option_Title" to="/"> 
-              <FontAwesomeIcon className="Menu_Option_Icon" icon={faWalking} color="white" size="1x"/>Pants 
+              <FontAwesomeIcon className="Menu_Option_Icon" icon={faBook} color="white" size="1x"/>Blogs 
             </Link>
           </Nav.Link>
           <Nav.Link>
             <Link className="Menu_Option_Title" to="/"> 
-              <FontAwesomeIcon className="Menu_Option_Icon" icon={faShoePrints} color="white" size="1x"/>Shoes 
-            </Link>
-          </Nav.Link>
-          <Nav.Link >
-            <Link className="Menu_Option_Title" to="/"> 
-              <FontAwesomeIcon className="Menu_Option_Icon" icon={faClock} color="white" size="1x"/>Watchs
-            </Link>
+              <FontAwesomeIcon className="Menu_Option_Icon" icon={faUser} color="white" size="1x"/>About Us 
+            </Link>            
           </Nav.Link>
           <Nav.Link>
             <Link className="Menu_Option_Title" to="/"> 
@@ -46,10 +41,12 @@ const Header = ({ siteTitle }) => (
             </Link>
           </Nav.Link>
           <Nav.Link>
-            <FontAwesomeIcon className="Menu_Option_Title" icon={faShoppingCart} color="white" size="lg"/>
+            <Link className="Menu_Option_Title" to="/"> 
+              <FontAwesomeIcon className="Menu_Option_Title" icon={faShoppingCart} color="white" size="lg"/>
+            </Link>
           </Nav.Link>
         </Nav>
-      </Navbar.Collapse>
+       </Navbar.Collapse>
     </Navbar>
 )
 

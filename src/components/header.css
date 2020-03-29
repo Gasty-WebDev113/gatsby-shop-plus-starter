@@ -11,6 +11,11 @@
     text-decoration: none;
 }
 
+#Menu{
+    display: flex;
+    align-items: center;
+}
+
 #Menu_Items{
     width: 100%;
     text-align: end;
@@ -24,6 +29,7 @@
     margin-right: 10px;
     font-weight: bold;
 }
+
 .Menu_Option_Title:hover{
     text-decoration: none;
     color: whitesmoke;
@@ -34,6 +40,7 @@
     display: none;
 }
 
+
 .navbar-light .navbar-toggler{
     background: white !important;
 }
@@ -42,6 +49,7 @@
     .Menu_Option_Icon{
         display: inherit;
     }
+  
 }
 
 @media only screen and (max-width: 480px){

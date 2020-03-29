@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import ProductCard from './card'
+import ProductCard from './productcard'
 import ListGroup from 'react-bootstrap/ListGroup'
 import './product_list.css'
 import { Button } from "react-bootstrap"
@@ -17,6 +17,7 @@ const ProductList = () => {
                     handle
                     description
                     tags
+                    handle
                     priceRange {
                     minVariantPrice {
                         amount
@@ -41,15 +42,15 @@ const ProductList = () => {
 
     return(
         <div id="Product_List_Container" >
-            <h1 id="Product_List_Title">Featured</h1>
+            <h1 className="List_Title">Featured</h1>
             <div id="Product_List">
                 {
                     data.allShopifyProduct.edges.map(({node}) =>
-                        <ProductCard {...node} />
+                        <ProductCard {...node} key={node.id} />
                     )
                 }
             </div>
-            <Button variant="outline-dark">View Featured</Button>
+            <Button variant="outline-dark" className="List_Button">View Featured</Button>
         </div>
     )
 }
