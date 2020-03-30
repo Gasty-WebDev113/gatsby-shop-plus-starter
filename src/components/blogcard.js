@@ -5,16 +5,15 @@ import './blogcard.css'
 import Img from "gatsby-image"
 
 const BlogCard = ({
-    id,
+    shopifyId,
     content,
     title,
     tags,
     publishedAt,
     image,
 }) =>{
-    console.log(id, content, title,tags,content)
     return(
-        <Link to="/blogs" className="Blog_Card_Link" id={id}>
+        <Link to={`blogs/${shopifyId}`} className="Blog_Card_Link" id={shopifyId}>
             <Card id="Blog_Card_Container">
                 <Img variant="top" fluid={image.localFile.childImageSharp.fluid} className="Blog_Card_Image" />
                 <Card.Body id="Blog_Card_Body">

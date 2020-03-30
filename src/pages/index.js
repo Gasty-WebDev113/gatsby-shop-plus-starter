@@ -17,7 +17,6 @@ const IndexPage = () => (
     <Landing />
     <ProductList />
     <BlogList />
-    <Footer />
   </Layout>
 )
 

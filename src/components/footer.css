@@ -4,8 +4,31 @@
     justify-content: center;
     background: #000033;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     align-items: center;
+}
+#Footer_Container>div{
+    display: flex;
+}
+#Footer_Logo_Container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 14rem;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+#Footer_Logo_Container>h3{
+    color: white;
+    width: 100%;
+}
+
+.Footer_Logo{
+    width: 70px;
+    height: 70px;
+    margin: 0.5rem;
 }
 .Footer_List{
     margin-left: 35px;
@@ -30,11 +53,13 @@
     height: 120px;
     margin-left: 35px;
     margin-right: 35px;
+    width: 15rem;
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 780px){
     #Footer_Container{
         flex-direction: column;
+        flex-wrap: wrap;
     }
     #Footer_Social{
         width: 50%;

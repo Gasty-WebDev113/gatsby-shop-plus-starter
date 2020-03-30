@@ -13,6 +13,7 @@ const BlogList = () => {
                 edges{
                     node{
                         id
+                        shopifyId
                         title
                         tags
                         publishedAt(fromNow: true)
@@ -42,7 +43,7 @@ const BlogList = () => {
                     <div id="Blogs_List">
                         {
                             blogdata.allShopifyArticle.edges.map(({node}) => 
-                                <BlogCard {...node} key={node.id} />
+                                <BlogCard {...node} key={node.shopifyId} />
                             )
                         }
                     </div>

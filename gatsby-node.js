@@ -32,8 +32,26 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allShopifyArticle(sort: { fields: [shopifyId] }) {
+        edges {
+          node {
+            shopifyId
+            contentHtml
+            content
+            publishedAt(fromNow: true)
+            tags
+            title
+            image {
+              id
+              src
+            }
+          }
+        }
+      }
     }
   `)
+
+  //Products
 
   result.data.allShopifyProduct.edges.forEach(({ node }) => {
     createPage({
@@ -41,6 +59,18 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/product.js`),
       context: {
         product: node,
+      },
+    })
+  })
+
+  //Blogs
+
+  result.data.allShopifyArticle.edges.forEach(({ node }) => {
+    createPage({
+      path: `/blogs/${node.shopifyId}`,
+      component: path.resolve(`./src/templates/blogdetail.js`),
+      context: {
+        blog: node,
       },
     })
   })

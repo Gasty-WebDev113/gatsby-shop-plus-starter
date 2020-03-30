@@ -11,7 +11,7 @@ const FirstBlog = () => {
             allShopifyArticle(limit: 1){
                 edges{
                     node{
-                        id
+                        shopifyId
                         title
                         tags
                         publishedAt(fromNow: true)
@@ -32,7 +32,7 @@ const FirstBlog = () => {
     const firstblogdata = firstblog.allShopifyArticle.edges[0].node
     console.log(firstblog)
     return(
-        <Link to="/blogs" className="Blog_Card_Link">
+        <Link to={`blogs/${firstblogdata.shopifyId}`} className="Blog_Card_Link">
             <Card id="First_Blog_Container">
                 <div id="First_Blog_Image">
                     <Img variant="top" fluid={firstblogdata.image.localFile.childImageSharp.fluid}/>

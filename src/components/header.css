@@ -1,8 +1,9 @@
 #Container{
-    background: black !important;
+    background: #000033 !important;
     position: fixed;
     width: 100%;
     z-index: 999;
+    height: 70px;
 }
 
 #Title{
@@ -27,7 +28,7 @@
     font-weight: normal;
     margin-left: 10px;
     margin-right: 10px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .Menu_Option_Title:hover{
